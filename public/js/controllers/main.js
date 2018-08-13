@@ -7,37 +7,37 @@ angular.module('orderController', [])
 
 		var menu = {
     'foodList': [{
-        'name': 'Buffalo Barb Championship Wing Sauce',
+        'name': 'Kofte Burger',
         'price': '8.49'
     }, {
-        'name': 'Home-Grown Guacamole',
+        'name': 'Ev Yapimi Sucuk',
         'price': '4.99'
     }, {
-        'name': 'Famous Barbecue Chicken',
+        'name': 'Tavuk Kanatları',
         'price': '6.99'
     },
 		{
-				'name': 'Jack It Up Burger',
+				'name': 'Benim Specialim',
 				'price': '7.69'
 		},
 		{
-        'name': 'Blushing Maine Lobster Cakes',
+        'name': 'Havuclu Kek',
         'price': '9.89'
     },
 		{
-				'name': 'Garlic Seafood Soup',
+				'name': 'Tavuk Corbası',
 				'price': '4.79'
 		},
 		{
-				'name': 'Original Banana Split',
+				'name': 'Muzlu Pasta',
 				'price': '3.49'
 		},
 		{
-				'name': 'Chocolate Crème Brulee with Blackberries',
+				'name': 'Bogurtlenli yogurt',
 				'price': '5.49'
 		}],
     'valueSelected': {
-        'name': 'Famous Barbecue Chicken',
+        'name': 'Meshur sandvic',
         'price': '6.99'
     }
 }
@@ -45,16 +45,16 @@ angular.module('orderController', [])
 		$scope.selectedValue = menu['valueSelected'];
 		$scope.foodList = menu['foodList'];
 
-		// GET =====================================================================
-		// when landing on the page, get all orders and show them
-		// use the service to get all the orders
+		
+		//  get all orders and show them
+		
 		Orders.get()
 			.success(function(data) {
 				$scope.orders = data;
 				$scope.loading = false;
 			});
 
-		// CREATE ==================================================================
+		
 		// when submitting the add form, send the text to the node API
 		$scope.createOrder = function() {
 
@@ -71,7 +71,7 @@ angular.module('orderController', [])
 					}
 
 				}
-				// call the create function from our service (returns a promise object)
+				// call the create function from our service 
 				Orders.create(order)
 
 					// if successful creation, call our get function to get all the new orders
@@ -85,7 +85,7 @@ angular.module('orderController', [])
 			}
 		};
 
-		// DELETE ==================================================================
+		
 		// delete a order after checking it
 		$scope.deleteOrder = function(id) {
 			$scope.loading = true;
