@@ -1,7 +1,7 @@
 angular.module('orderService', [])
 
-	// super simple service
-	// each function returns a promise object
+	
+	
 	.factory('Orders', ['$http',function($http) {
 		return {
 			get : function() {
