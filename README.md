@@ -7,7 +7,7 @@ Node provides the RESTful API. Angular provides the front end and accesses the A
 
 
 
-## API 
+# API 
 
 HTTP      Verb	URL	           Description
 GET	      /api/food	           Get all of the food items in the order
