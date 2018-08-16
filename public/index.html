@@ -1,13 +1,13 @@
 <!doctype html>
 
-<!-- ASSIGN ANGULAR MODULE -->
+<!-- ANGULAR MODULE -->
 <html ng-app="emerilOrder">
 <head>
 	<!-- META -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
-	<title>Node/Angular Food Order App</title>
+	<title>Emrinizdeyiz! Fast Food</title>
 
 	<!-- SCROLLS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
@@ -22,8 +22,8 @@
 	
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
 
-	<script src="js/controllers/main.js"></script> <!-- load  controller -->
-	<script src="js/services/orders.js"></script> <!-- load order service -->
+	<script src="js/controllers/main.js"></script> 
+	<script src="js/services/orders.js"></script> 
 	<script src="js/core.js"></script> <!-- load  main application -->
 
 </head>
@@ -33,9 +33,9 @@
 
 		
 		<div class="jumbotron text-center">
-			<h2> Heyy Foodie !!!<h2>
+			<h2> Merhaba!!<h2>
 			<h3>Siparis Ozeti <span class="label label-info">{{ orders.length }}</span> <h3>
-			<h3>Toplam <span class="label label-info">{{ total }}</span> (inclusive of 7.5% tax)</h3>
+			<h3>Toplam <span class="label label-info">{{ total }}</span> (KDV Dahil)</h3>
 		</div>
 
 		
@@ -70,7 +70,7 @@
 					</div>
 
 					
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="createOrder()">Add</button>
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createOrder()">Siparişi Ver</button>
 				</form>
 			</div>
 		</div>
