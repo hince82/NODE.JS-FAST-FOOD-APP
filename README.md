@@ -10,7 +10,11 @@ Node provides the RESTful API. Angular provides the front end and accesses the A
 # API 
 
 HTTP     	URL     	           Description
+
 GET	      /api/food	           Get all of the food items in the order
+
 POST	    /api/food	           Create a single food item
+
 DELETE	  /api/food/:food_id   Delete a single food item
+
 
